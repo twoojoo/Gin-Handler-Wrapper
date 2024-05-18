@@ -1,4 +1,4 @@
-package main
+package ghw
 
 import (
 	"net/http"

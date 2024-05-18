@@ -11,6 +11,7 @@ handler := func (c *gin.Context) error {
     }
 
     c.JSON(200, gin.H{"baz": baz})
+    return nil
 }
 
 r.GET("/foo/bar/:baz", ghw.Wrap(handler))
