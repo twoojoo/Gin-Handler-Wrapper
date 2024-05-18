@@ -1,4 +1,4 @@
-Go Handler Wrapper
+Gin Handler Wrapper
 
 ```go
 r := gin.Default()
