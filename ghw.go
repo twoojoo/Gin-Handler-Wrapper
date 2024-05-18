@@ -32,7 +32,7 @@ func (e APIError) Error() string {
 	return e.Message
 }
 
-func (e APIError) SkipAbort() APIError {
+func (e APIError) PreventAbort() APIError {
 	e.preventAbort = true
 	return e
 }
