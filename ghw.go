@@ -108,7 +108,7 @@ func Wrap(f func(*gin.Context) error) gin.HandlerFunc {
 					return
 				}
 
-				c.JSON(apiErr.StatusCode, APIError{Message: apiErr.Message})
+				c.JSON(apiErr.StatusCode, apiErr)
 				return
 			}
 

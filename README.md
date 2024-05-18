@@ -24,7 +24,7 @@ func main() {
 
     r.GET("/foo/bar/:baz", ghw.Wrap(handler))
 
-    err = r.Run(":3000")
+    err := r.Run(":3000")
 	if err != nil {
 		panic(err)
 	}
