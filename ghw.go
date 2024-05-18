@@ -32,6 +32,16 @@ func (e APIError) Error() string {
 	return e.Message
 }
 
+func (e APIError) SkipAbort() APIError {
+	e.preventAbort = true
+	return e
+}
+
+func (e APIError) WithBodyParser(p ApiErrBodyParser) APIError {
+	e.bodyParser = p
+	return e
+}
+
 func appendOptions(e APIError, opts []APIErrorOption) APIError {
 	if opts == nil {
 		return e
